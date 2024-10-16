@@ -1,5 +1,7 @@
 name: pull-request-workflow
-on: pull_request # pull request가 실행되었을 때 작동
+on:
+  pull_request: # pull request가 실행되었을 때 작동
+    types: [opened] # pull request가 생성된 시점에만 트리거가 되게 한다. 즉 이게 없을 때 pull request가 열려있는 상태에서 push를 했다면 해당 액션이 실행
 
 jobs:
   pull-request-job:
