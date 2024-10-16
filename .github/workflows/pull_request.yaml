@@ -1,0 +1,13 @@
+name: pull-request-workflow
+on: pull_request # pull request가 실행되었을 때 작동
+
+jobs:
+  pull-request-job:
+    runs-on: ubuntu-latest # ubuntu 최신 버전 서버에서 작동되도록 명시, 이 코드가 실행될 환경 명시
+    steps: # 각각 스텝들을 정의하는 곳
+      - name: step1 # step1 이름
+        run: echo hello world # step1이 실행할 것들 명시
+      - name: step2 # step2 이름
+        run: | # |를 추가하면 멀티라인 커맨드를 작성할 수 있다
+          echo hello world
+          echo github action
